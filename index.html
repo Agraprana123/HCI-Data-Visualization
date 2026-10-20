@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Data Visualization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo"><span class="logo-icon">◈</span> HCI Viz</div>
+            <nav class="nav">
+                <a href="#overview">Overview</a>
+                <a href="#charts">Charts</a>
+                <a href="#data">Data</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <span class="badge">📊 Human Computer Interaction</span>
+        <h1>Data <span class="accent">Visualization</span></h1>
+        <p class="subtitle">Visualisasi data interaksi manusia-komputer dari 1.250 responden.</p>
+    </section>
+
+    <!-- Overview Cards -->
+    <section class="section" id="overview">
+        <div class="container">
+            <h2 class="section-title">Ringkasan</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-emoji">👥</div>
+                    <div class="card-val">1,250</div>
+                    <div class="card-label">Responden</div>
+                </div>
+                <div class="card">
+                    <div class="card-emoji">🖥️</div>
+                    <div class="card-val">8,430</div>
+                    <div class="card-label">Sesi Interaksi</div>
+                </div>
+                <div class="card">
+                    <div class="card-emoji">⏱️</div>
+                    <div class="card-val">4.2s</div>
+                    <div class="card-label">Rata-rata Waktu</div>
+                </div>
+                <div class="card">
+                    <div class="card-emoji">😊</div>
+                    <div class="card-val">87%</div>
+                    <div class="card-label">Kepuasan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="section section-alt" id="charts">
+        <div class="container">
+            <h2 class="section-title">Visualisasi Data</h2>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>Metode Input (%)</h3>
+                    <canvas id="chartDoughnut"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>Efisiensi Input (WPM)</h3>
+                    <canvas id="chartBar"></canvas>
+                </div>
+            </div>
+            <div class="chart-row">
+                <div class="chart-box">
+                    <h3>Kepuasan per Aspek</h3>
+                    <canvas id="chartRadar"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>Skor SUS per Platform</h3>
+                    <canvas id="chartSUS"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Table -->
+    <section class="section" id="data">
+        <div class="container">
+            <h2 class="section-title">Detail Usability</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>SUS Score</th>
+                            <th>Grade</th>
+                            <th>Task Completion</th>
+                            <th>Error Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Desktop App</td><td>85.1</td><td><span class="g g-a">A</span></td><td>96%</td><td>2.8%</td></tr>
+                        <tr><td>Web App</td><td>82.5</td><td><span class="g g-a">A</span></td><td>94%</td><td>3.2%</td></tr>
+                        <tr><td>Mobile App</td><td>78.3</td><td><span class="g g-b">B+</span></td><td>89%</td><td>5.1%</td></tr>
+                        <tr><td>Voice UI</td><td>65.7</td><td><span class="g g-c">C+</span></td><td>72%</td><td>12.4%</td></tr>
+                        <tr><td>AR/VR</td><td>61.2</td><td><span class="g g-c">C</span></td><td>68%</td><td>15.7%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>HCI Data Visualization © 2026 — Data bersifat ilustratif.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
